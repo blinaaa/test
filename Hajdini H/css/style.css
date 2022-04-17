@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@478&family=Open+Sans&family=Poppins&display=swap");
+:root {
+  --blue: #425664;
+  --brown: #c6ad8f;
+  --darkborwn: #b35741;
+  --milk: #f6f4f2;
+  --lightbrown:#edd4b7;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+/***************************************************************************Header****************************************************************************************/
+.header {
+  width: 100%;
+  height: 12vh;
+  position: relative;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  padding: 0 3%;
+}
+nav img {
+  width: 130px;
+  padding-top: 10px;
+}
+.nav-list {
+  flex: 1;
+  text-align: right;
+  margin-top: 15px;
+}
+.nav-list ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 16px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.nav-list ul a {
+  text-decoration: none;
+  color: black;
+  text-decoration: none;
+}
+.nav-list ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--blue);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-list ul li:hover::after {
+  width: 100%;
+}
+/*Drop down header*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f6f4f2;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+nav .fas {
+  display: none;
+}
+/***************************************************************************Home Page****************************************************************************************/
+
+/*Info Box*/
+.infobox {
+  width: 100%;
+  height: 70vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+    url(/images/main-index.jpg);
+  background-position: top;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  padding-top: 200px;
+  line-height: 30px;
+}
+.infobox .btn {
+  margin-top: 30px;
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+}
+.infobox .joinus-btn {
+  border: none;
+  background: var(--darkborwn);
+  color: white;
+}
+.infobox .joinus-btn:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.9);
+}
+.infobox .hire-btn:hover {
+  background: rgb(162, 162, 162);
+  transform: 1s;
+}
+/*Before and After Section*/
+.work-companies {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  cursor: pointer;
+  padding-bottom: 2%;
+  background-color: #b35741;
+}
+.work-companies h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+.work {
+  display: flex;
+  justify-content: space-between;
+  margin: 5%;
+}
+.work-col {
+  max-width: 90%;
+  flex-basis: 45%;
+  margin: 0 20px;
+  text-align: center;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #e8e6e6;
+}
+.work-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  transform: 0.5px;
+}
+.work-col img {
+  width: 90%;
+  height: 67%;
+  padding-top: 3%;
+}
+.work-col p {
+  padding: 3%;
+  font-size: 17px;
+}
+.work-col h3 {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 20px;
+  font-size: 19px;
+}
+.work-col a {
+  text-decoration: none;
+  color: black;
+}
+/**Services Info Box**/
+.service-boxes{
+  /*background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30,0.5)) ,url(/images/);
+  background-position: center;
+  background-size: cover;*/
+  background-color: var(--blue);
+  min-width: 100%;
+  height: 30vh;
+  margin-top: 0;
+  position: relative;
+}
+.service-title{
+  color: var(--milk);
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  padding-top: 1%;
+}
+.lists{
+  display: flex;
+  justify-content: space-around;
+}
+.lists li{
+  list-style-type : none;
+  font-size: 18px;
+  color: var(--milk);
+}
+.lists ul{
+  margin: 2%;
+}
+/*Services 3Boxes and AllServices Wrapper*/
+.services{
+  width: 100%;
+  text-align: center;
+  background-color: rg;
+
+}
+.services h1{
+  font-size: 36px;
+  font-weight: 600;
+}
+.services-col p{
+  color: black;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+.row{
+  margin: 0 2%;
+  display: flex;
+  justify-content: space-between;
+}
+.services-col{
+  flex-basis: 55%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px 10px;
+  box-sizing: border-box;
+  margin: 0 5px;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.services-col h3{
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+  color: black;
+}
+.services2{
+  background-color: darkolivegreen;
+  padding: 3% 0;
+  height: 105vh;
+}
+.services2  h1{
+  color: white;
+}
+.services-col a{
+  text-decoration: none;
+}
+.allservices-col{
+  overflow: hidden;
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 2%;
+  border-radius: 30px;
+}
+.allservices-col img {
+  width: 100%;
+  height: 100%;
+}
+.layer{
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  font-size: 20px;
+  color: black;
+  transition: 0.3s;
+  text-align: center;
+}
+.allservices-col :hover{
+  background:rgba(192,192,192, 0.6);
+  transform: 1s;
+}
+.layer:hover h3{
+  background:rgba(192,192,192, 0);
+}
+.layer h3{
+  width:100%;
+  font-weight: 800;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+.layer:hover h3{
+  bottom: 40%;
+  opacity: 1;
+}
+/*********************************************************Footer********************************************************/
+.footer{
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+  display: inline-block;
+  background-color: var(--lightbrown);
+}
+.container{
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.container-text{
+  padding: 20px 30px;
+}
+.container-text h3{
+  padding-top: 20px;
+}
+.container2{
+  padding-top: 20px;
+  display: inline-block;
+  padding: 20px 34%;
+}
+.container2 .fab{
+  padding: 0 40px;
+}
+.copyright{
+  padding: 10px 26%;
+}
+
+/********************************************************About Us Page**************************************************************/
+
+.container-aboutus{
+  margin-top: 5%;
+  width: 100%;
+  text-align: center;
+  
+}
+.container-aboutus img{
+  width: 495px;
+  height: 80vh;
+}
+.about-text{
+  width: 550px;
+}
+.about-text h1{
+  color: white;
+  font-size: 50px;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+.about-text h5{
+  color: #05386B;
+  font-size: 25px;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+.about-text span{
+  color: var(--brown);
+}
+.about-text p{
+  letter-spacing: 1px;
+  color: #bbb;
+  line-height: 28px;
+}
+.main{
+  width: 100%;
+  margin: 5% auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.main2{
+  background-color: var(--brown);
+}
+.main2 p{
+  color: #05386B;
+}
+.main2 .about-text span{
+  color: var(--darkgreen);
+}
+.talk-btn{
+  margin-top: 30px;
+  border: 1px solid white;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  background: var(--darkblue);
+  color: white;
+}
+.talk-btn:hover{
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.4);
+}
+.mapouter{
+  padding: 2% 0;
+}
+
+/*********************************************************Media Query***************************************************************/
